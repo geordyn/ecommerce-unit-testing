@@ -2,13 +2,12 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
     products = require('./controllers/productsCtrl');
-
-app = express();
+    app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
-var port = process.env.port || 3000
+var port = process.env.port || 3000;
 app.listen(port, function() {
   console.log('A Lannister always pays his debts...')
 })
